@@ -3,7 +3,7 @@ package 排序算法.直接选择;
 public class Demo {
 
     public static void main(String[] args) {
-        int[] arr = {5, 2, 0, 0, 1, 0, 6, 1, 3};
+        int[] arr = {5, 2, 0, 0, 1, 0, 6, 1, 3, 156, 55, 44, 21, 21};
         sort(arr);
         for (int num : arr) {
             System.out.print(num + " ");
@@ -17,8 +17,9 @@ public class Demo {
      * 如此循环到倒数第二个数和最后一个数比较为止。
      */
     private static void sort(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
+        int len = arr.length;
+        for (int i = 0; i < len; i++) {
+            for (int j = i + 1; j < len; j++) {
                 if (arr[i] > arr[j]) {
                     int temp = arr[i];
                     arr[i] = arr[j];

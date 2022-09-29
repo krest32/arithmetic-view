@@ -18,6 +18,7 @@ public class Demo {
         return demo;
     }
 
+
     public static void main(String[] args) {
         Demo instance = getInstance();
         Demo instance1 = getInstance();

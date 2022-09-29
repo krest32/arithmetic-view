@@ -15,16 +15,17 @@ public class Demo {
      * 原理：假设前面已经排序，新插入的数字找到小于自己的，直接插入这个位置就可以
      */
     private static void sort(int[] arr) {
-        int insetIdx = 0;
-        for (int i = 1; i < arr.length; i++) {
-            int temp = arr[i];
-            insetIdx = i;
-            while (insetIdx > 0) {
-                if (arr[insetIdx - 1] > temp) {
-                    arr[insetIdx] = arr[insetIdx - 1];
-                    arr[insetIdx - 1] = temp;
+        int len = arr.length;
+        int insertIdx = 0;
+        for (int i = 1; i < len; i++) {
+            int curVal = arr[i];
+            insertIdx = i;
+            while (insertIdx > 0) {
+                if (arr[insertIdx - 1] > curVal) {
+                    arr[insertIdx] = arr[insertIdx - 1];
+                    arr[insertIdx - 1] = curVal;
                 }
-                insetIdx--;
+                insertIdx--;
             }
         }
     }
